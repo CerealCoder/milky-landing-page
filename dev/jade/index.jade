@@ -5,10 +5,21 @@ html
    include ./includes/head.jade
       
    body
+      // Body will have a margin of 15px
       
-      include ./includes/main.jade
-         
-      script 
+      main.pageWrapper
+      
+         include ./includes/header.jade
+         include ./includes/about.jade
+         include ./includes/techs.jade
+         include ./includes/features.jade
+         include ./includes/setup.jade
+         include ./includes/share.jade
+         include ./includes/footer.jade
+      
+      
+      script
          include ../../assets/js/google-analytics.js
-      
-      script(src='../../assets/js/app.js')
+         
+      script(src='/assets/js/app.js')
+      script(src="/assets/js/prism.js")
