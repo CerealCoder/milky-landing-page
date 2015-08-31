@@ -7,17 +7,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Put Whatever you want in this section, its for seo purposes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
-    <main class="main">
-      <section class="wrapper main__section">
-        <h1 class="super-header fade-in-up">Milky Starter Kit</h1>
-        <p class="main__strapline fade-in-up">Thanks for downloading </p>
+    <!-- Body will have a margin of 15px-->
+    <main class="pageWrapper">
+      <header class="header">
+        <div class="wrapper"> 
+          <h1 class="mainTitle">Look ! This is Milky</h1>
+          <h2 class="strapline">A front-end boilerplate for modern projects.</h2>
+          <div class="buttons"><a href="#" class="downloadBtn"> <span class="text">Download</span><span class="cta dl"> </span></a><a href="#" class="viewOnSite"> <span class="text">View on Github</span><span class="cta"></span></a></div>
+        </div>
+      </header>
+      <section class="about gray">
+        <p>Milky is an opinionated boilerplate built for the modern web developer. It is based on the latest technologies and will help you improve your workflow. It comes packed with some pretty neat features and a build process to avoid repetitive tasks so you can focus on your code. </p>
       </section>
+      <section class="techs">
+        <div class="wrapper--large">
+          <div class="techs__logo">
+            <figure class="caption html5">
+            </figure>
+          </div>
+          <div class="techs__logo">
+            <figure class="caption sass">
+            </figure>
+          </div>
+          <div class="techs__logo">
+            <figure class="caption gulpJS">
+              
+            </figure>
+          </div>
+        </div>
+        <div class="wrapper--large techs__description">
+          <p>Milky is Html5 ready, which means you can start creating fully semantic, accessible markup for your websites</p>
+          <p>Milky is SASS powered, using indented syntax. Sorry, no Scss ! It also comes with Bourbon and the Neat grid system.</p>
+          <p>Insant browser refresh, Jade and Sass compiling, Image, JS/CSS minification and autoprefixing are all taken care of by this super fast Build tool. </p>
+        </div>
+      </section>
+      <section class="features">
+        <div class="wrapper features__container">
+          <figure class="feature">
+            <figcaption>     <strong>Jade Compiling</strong>Code beautiful and modular markup using this super fast template engine</figcaption>
+          </figure>
+          <figure class="feature">
+            <figcaption>  <strong>Bourbon and Neat Grid</strong>Create responsive grid layouts for your site and keep your markup semantic by using Neat and Bourbon.</figcaption>
+          </figure>
+          <figure class="feature">
+            <figcaption><strong>Browser-Sync</strong>Live browser reload and code injection on multiple devices at the same time</figcaption>
+          </figure>
+          <figure class="feature">
+            <figcaption><strong>JS and CSS concatenation</strong>Improve your website's performance by minifiying and concatenating your styles and scripts</figcaption>
+          </figure>
+          <figure class="feature">
+            <figcaption><strong>Image Minification </strong>Compress your website's images to help increase loading times and overall performance. </figcaption>
+          </figure>
+          <figure class="feature">
+            <figcaption><strong>Auto Prefixing </strong>Never worry about adding prefixes to your styles again. Auto Prefixer takes care of the job and is always up-to-date.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="setup">
+        <h3>Setup </h3>
+        <div class="wrapper">
+          <!-- The code editor-->
+          <div class="code-editor">
+            <!-- menu bar-->
+            <div class="menu-bar">
+              <div class="command-buttons"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+              <h4 class="title">Step 1 : Do Something with the code.</h4>
+            </div>
+            <!-- Code goes here-->
+            <pre class="code-container css"><code class="language-css">p {color: red};</code><code class="language-css">a {text-decoration: none};</code></pre>
+            <pre class="javascript"><code class="language-javascript"> 
+function(){ return false; }</code><code class="language-javascript">strong {text-align: left};</code></pre>
+          </div>
+        </div>
+      </section>
+      <section class="share">
+        <div class="wrapper--xtra-slim"><a href="#" class="facebook"></a><a href="#" class="twitter"></a><a href="#" class="github"></a>
+          <p>Once Live, add the share links</p>
+        </div>
+      </section>
+      <footer class="footer"> 
+        <div class="logo pulse-scale">カリム</div>
+        <div class="sub-footer">Brought to you by Milkshake Panda.</div>
+      </footer>
     </main>
-    <script> var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-XXXXX-X"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();
+    <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-XXXXX-X"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();
     </script>
-    <script src="../../assets/js/app.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/prism.js"></script>
   </body>
 </html>

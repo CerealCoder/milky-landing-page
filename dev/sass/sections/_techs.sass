@@ -1,0 +1,56 @@
+// Technologies section
+.techs
+
+   background-color: $yellow
+   display: flex
+   flex-direction: column
+   justify-content: center
+   align-items: center
+
+   // Wrapper
+   .wrapper--large
+
+      display: flex
+      justify-content: space-between
+      align-items: center
+      align-content: baseline
+      width: 100%
+
+      .techs__logo
+
+         width: 32%
+         text-align: center
+         display: flex
+         flex-direction: column
+         figure
+            // play around with the widths of the icons
+            &.html5
+
+               svg
+                  width: 170px
+
+            &.sass
+
+               svg
+                  width: 250px
+
+            &.gulpJS
+
+               svg
+                  width: 140px
+                  height: auto
+
+   // Tech description
+
+   .techs__description
+
+      margin-top: 25px
+
+      p
+         width: 30%
+         text-align: center
+         align-self: flex-start
+         font-size: 17px
+         line-height: 1.45
+         color: $dark-blue
+         font-weight: 600

@@ -1,0 +1,52 @@
+// Setup Section
+.setup
+
+   background-color: $red
+   color: #fff
+   text-align: center
+
+   h3
+      font-size: 2.3em
+
+   .wrapper
+      margin-top: 40px
+
+      .code-editor
+
+         max-width: 730px
+         height: 390px
+         margin: 0 auto
+         overflow: hidden
+
+         // Menu Bar
+         .menu-bar
+            background-color: #FAFAFA
+            padding: 5px 10px
+            border-top-left-radius: 4px
+            border-top-right-radius: 4px
+            color: black
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            // Window buttons
+            .command-buttons
+
+               span
+                  +size(15px)
+                  display: inline-block
+                  margin-right: 8px
+                  border-radius: 50%
+
+               .red
+                  background-color: #F15A58
+               .yellow
+                  background-color: #F6E584
+               .green
+                  background-color: #85C98A
+
+            // Title
+            .title
+               font-weight: 400
+
+         //
