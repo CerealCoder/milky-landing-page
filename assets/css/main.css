@@ -1363,6 +1363,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  padding: 130px 0;
+}
+
 h1 {
   font-size: 2em;
 }
