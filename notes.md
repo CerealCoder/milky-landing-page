@@ -1,5 +1,6 @@
 ## Todo
 
+- Change copy to lorem ipsum
 - Change download button to white on red (or other combination)
 - responsive
 - Animation on the social icons
