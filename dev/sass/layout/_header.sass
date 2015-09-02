@@ -64,10 +64,10 @@
 
                // Download Button
                &.downloadBtn
-                  background-color: $yellow
+                  background-color: $red
 
                   span.cta svg path
-                     fill: black
+                     fill: #fff
 
                // Github button
                &.viewOnSite
@@ -79,3 +79,14 @@
 
             &:last-child
                margin-right: 0
+
+      // Responsive
+      +media(max-width 833px)
+         max-width: 45em
+
+         .mainTitle
+
+            font-size: 4.2em
+
+         .strapline
+            font-size: 2em

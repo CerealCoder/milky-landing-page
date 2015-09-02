@@ -1699,10 +1699,10 @@ p {
           transform: translateY(-85%);
 }
 .header .wrapper .buttons a:hover.downloadBtn {
-  background-color: #e6cf8b;
+  background-color: #B56969;
 }
 .header .wrapper .buttons a:hover.downloadBtn span.cta svg path {
-  fill: black;
+  fill: #fff;
 }
 .header .wrapper .buttons a:hover.viewOnSite {
   background-color: #fff;
@@ -1712,6 +1712,17 @@ p {
 }
 .header .wrapper .buttons a:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 833px) {
+  .header .wrapper {
+    max-width: 45em;
+  }
+  .header .wrapper .mainTitle {
+    font-size: 4.2em;
+  }
+  .header .wrapper .strapline {
+    font-size: 2em;
+  }
 }
 
 .wrapper {
@@ -1756,6 +1767,12 @@ p {
   font-size: 21px;
   line-height: 2;
   color: #292C31;
+}
+@media screen and (max-width: 833px) {
+  .about p {
+    max-width: 34em;
+    font-size: 19px;
+  }
 }
 
 .techs {
@@ -1819,8 +1836,29 @@ p {
   width: 140px;
   height: auto;
 }
+@media screen and (max-width: 1226px) {
+  .techs .wrapper--large {
+    max-width: 63em;
+  }
+  .techs .wrapper--large .techs__logo figure.html5 svg {
+    width: 150px;
+  }
+  .techs .wrapper--large .techs__logo figure.sass svg {
+    width: 200px;
+  }
+  .techs .wrapper--large .techs__logo figure.gulpJS svg {
+    width: 110px;
+    height: auto;
+  }
+}
 .techs .techs__description {
   margin-top: 25px;
+}
+@media screen and (max-width: 1226px) {
+  .techs .techs__description {
+    max-width: 63em;
+    margin: 0;
+  }
 }
 .techs .techs__description p {
   width: 30%;
@@ -1949,6 +1987,10 @@ p {
 .share .wrapper--xtra-slim a svg {
   height: 55px;
   width: 55px;
+}
+.share .wrapper--xtra-slim a:hover {
+  -webkit-animation: wobble .6s ease-out both;
+  animation: wobble .6s ease-out both;
 }
 .share .wrapper--xtra-slim a:last-child {
   margin: 0;
