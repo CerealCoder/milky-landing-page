@@ -22,8 +22,9 @@
          text-align: center
          display: flex
          flex-direction: column
+
          figure
-            // play around with the widths of the icons
+
             &.html5
 
                svg
@@ -39,6 +40,11 @@
                svg
                   width: 140px
                   height: auto
+
+         figcaption
+            display: none
+
+      // Normal Desktop Media Query
 
       +media(max-width 1226px)
          max-width: 63em
@@ -61,15 +67,58 @@
                   width: 110px
                   height: auto
 
+         & + .techs__description
+
+            max-width: 63em
+            margin: 0
+
+      // Tablet(ish) Media Query
+      +media(max-width 910px)
+         max-width: 48em
+
+         & + .techs__description
+
+            max-width: 48em
+            position: relative
+            top: -20px
+
+            p
+
+               font-size: 15px
+
+      // Defo Tablet
+      +media(max-width 768px)
+
+         flex-direction: column
+
+         .techs__logo
+
+            width: 50%
+            margin-bottom: 45px
+
+            &:last-child
+               margin-bottom: 0
+
+            figure svg
+               height: auto !important
+
+            figcaption
+               display: block
+               margin-top: 35px
+
+
+
+         & + .techs__description
+            display: none
+
+
+
+
    // Tech description
 
    .techs__description
 
       margin-top: 25px
-
-      +media(max-width 1226px)
-         max-width: 63em
-         margin: 0
 
       p
          width: 30%
