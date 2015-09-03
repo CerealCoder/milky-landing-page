@@ -1569,6 +1569,18 @@ pre[data-line] {
   visibility: visible !important;
 }
 
+.techs .wrapper--large .techs__logo figcaption, .techs .techs__description p {
+  width: 30%;
+  text-align: center;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #22264B;
+  font-weight: 600;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1738,6 +1750,41 @@ p {
     width: 85%;
   }
 }
+@media screen and (max-width: 527px) {
+  .header .wrapper {
+    max-width: 90%;
+  }
+  .header .wrapper .mainTitle {
+    font-size: 2.9em;
+  }
+  .header .wrapper .strapline {
+    font-size: 1.3em;
+  }
+}
+@media screen and (max-width: 420px) {
+  .header .wrapper .mainTitle {
+    font-size: 2.2em;
+  }
+  .header .wrapper .strapline {
+    font-size: 1em;
+  }
+  .header .wrapper .buttons {
+    width: 100%;
+  }
+  .header .wrapper .buttons a {
+    margin: 0 auto 20px !important;
+    display: block;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header .wrapper .mainTitle {
+    font-size: 1.9em;
+  }
+  .header .wrapper .strapline {
+    font-size: 0.8em;
+  }
+}
 
 .wrapper {
   max-width: 63em;
@@ -1792,6 +1839,12 @@ p {
   .about p {
     max-width: 31em;
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 527px) {
+  .about p {
+    max-width: 90%;
+    font-size: 17px;
   }
 }
 
@@ -1912,24 +1965,19 @@ p {
   .techs .wrapper--large .techs__logo figcaption {
     display: block;
     margin-top: 35px;
+    width: 100%;
   }
   .techs .wrapper--large + .techs__description {
     display: none;
   }
 }
+@media screen and (max-width: 527px) {
+  .techs .wrapper--large .techs__logo {
+    width: 70%;
+  }
+}
 .techs .techs__description {
   margin-top: 25px;
-}
-.techs .techs__description p {
-  width: 30%;
-  text-align: center;
-  -webkit-align-self: flex-start;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-  font-size: 17px;
-  line-height: 1.45;
-  color: #22264B;
-  font-weight: 600;
 }
 
 .features {

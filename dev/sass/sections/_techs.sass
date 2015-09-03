@@ -43,6 +43,7 @@
 
          figcaption
             display: none
+            @extend %caption
 
       // Normal Desktop Media Query
 
@@ -105,13 +106,18 @@
             figcaption
                display: block
                margin-top: 35px
+               width: 100%
 
 
 
          & + .techs__description
             display: none
 
+      // Semi Mobile
+      +media(max-width 527px)
 
+         .techs__logo
+            width: 70%
 
 
    // Tech description
@@ -121,10 +127,4 @@
       margin-top: 25px
 
       p
-         width: 30%
-         text-align: center
-         align-self: flex-start
-         font-size: 17px
-         line-height: 1.45
-         color: $dark-blue
-         font-weight: 600
+         @extend %caption
