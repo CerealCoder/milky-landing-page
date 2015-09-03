@@ -1724,6 +1724,20 @@ p {
     font-size: 2em;
   }
 }
+@media screen and (max-width: 678px) {
+  .header .wrapper {
+    max-width: 38em;
+  }
+  .header .wrapper .mainTitle {
+    font-size: 3.4em;
+  }
+  .header .wrapper .strapline {
+    font-size: 1.6em;
+  }
+  .header .wrapper .buttons {
+    width: 85%;
+  }
+}
 
 .wrapper {
   max-width: 63em;
@@ -1772,6 +1786,12 @@ p {
   .about p {
     max-width: 34em;
     font-size: 19px;
+  }
+}
+@media screen and (max-width: 678px) {
+  .about p {
+    max-width: 31em;
+    font-size: 18px;
   }
 }
 
@@ -1973,6 +1993,19 @@ p {
 @media screen and (max-width: 768px) {
   .features .features__container {
     max-width: 42em;
+  }
+}
+@media screen and (max-width: 678px) {
+  .features .features__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+  }
+  .features .features__container figure {
+    width: 100%;
   }
 }
 
