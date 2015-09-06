@@ -15,17 +15,25 @@ section.setup
                span.yellow
                span.green
             
-            h4.title Step 1 : Do Something with the code.
+            h4.title Step 1 : clone the repo.
          
          // Code goes here
-         pre.language-sass
-            
-            div
-               code.language-sass p {color: red};
-               code.language-sass a {text-decoration: none};
-            
-            div
-                     
-               code.language-javascript 
-                  | function(){ return false; }
-               code.language-javascript strong {text-align: left};
+         div.setup__code
+         
+            pre.step-1
+               code git clone git@github.com:MilkshakePanda/Milky.git
+               code cd path/to/Milky/dev
+               
+            pre.step-2
+               code sudo npm install
+               
+            pre.step-3
+               code gulp
+      
+      // navigation buttons 
+      .setup__buttons
+         
+         button(type="button").setup__previous Previous
+         button(type="button").setup__next Next
+         
+         
