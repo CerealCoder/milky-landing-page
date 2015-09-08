@@ -14,9 +14,9 @@
       .code-editor
 
          max-width: 730px
-         height: 390px
-         margin: 0 auto
+         margin: 0 auto 30px
          overflow: hidden
+         text-align: left
 
          +media(max-width 768px)
 
@@ -53,7 +53,26 @@
             .title
                font-weight: 400
 
-         //
+         // setup code
+         .setup__code
+
+            height: 230px
+            background-color: $quarternary
+            padding: 2em
+
+            pre:not(.showing)
+               display: none
+
+            pre
+               code
+                  font-family: $code-font
+                  font-size: 19px
+                  margin-bottom: 15px
+
+
+                  span
+
+                     margin-right: 30px
 
    +media(max-width 527px)
       display: none
