@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
-  <body>
-    <div class="loading-wrapper"><span class="pulse-scale">カリム   </span></div>
+  <body class="loaded">
     <main class="pageWrapper">
       <header class="header">
         <div class="wrapper"> 
@@ -71,13 +70,13 @@
             <!-- menu bar-->
             <div class="menu-bar">
               <div class="command-buttons"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
-              <h4 class="title">Step 1 : clone the repo.</h4>
+              <h4 class="title"></h4>
             </div>
             <!-- Code goes here-->
             <div class="setup__code">
-              <pre class="step"><code><span>my-computer $</span> git clone git@github.com:MilkshakePanda/Milky.git</code><code><span>my-computer $</span> cd path/to/Milky/dev</code></pre>
-              <pre class="step showing"><code><span>my-computer $</span> sudo npm install</code></pre>
-              <pre class="step"><code><span>my-computer $</span> gulp</code></pre>
+              <pre data-title="Step 1: Clone the repository and navigate to the dev folder" class="step showing"><code><span>my-computer $</span> git clone git@github.com:MilkshakePanda/Milky.git</code><code><span>my-computer $</span> cd path/to/Milky/dev</code></pre>
+              <pre data-title="Step 2: Install the dependencies" class="step"><code><span>my-computer $</span> sudo npm install</code></pre>
+              <pre data-title="Step 3: Run gulp and let the magic happen!" class="step"><code><span>my-computer $</span> gulp</code></pre>
             </div>
           </div>
           <!-- navigation buttons -->
