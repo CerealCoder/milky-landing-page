@@ -2007,7 +2007,7 @@ body.loaded .loading-wrapper .loading-wrapper span {
   background-color: #1E2022;
   padding: 2em;
 }
-.setup .wrapper .code-editor .setup__code pre:not(.showing) {
+.setup .wrapper .code-editor .setup__code pre:not(.stepVisible) {
   display: none;
 }
 .setup .wrapper .code-editor .setup__code pre code {
