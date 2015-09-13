@@ -1,6 +1,5 @@
 ## Todo
 
-- Create svg folder and change the include paths
 - Javascript functionality on the setup section
 - Javscript scroll animations
 - Add copy

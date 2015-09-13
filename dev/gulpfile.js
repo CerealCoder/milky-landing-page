@@ -71,7 +71,7 @@ gulp.task('sass', function(){
 
 gulp.task('uglify', function () {
 
-   gulp.src('js/*.js')
+   gulp.src('js/app.js')
       .pipe(plumber())
       .pipe(uglify())
       .pipe(gulp.dest('../assets/js'))
