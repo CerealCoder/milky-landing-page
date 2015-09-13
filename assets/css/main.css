@@ -1953,6 +1953,12 @@ body.loaded .loading-wrapper .loading-wrapper span {
 .setup .wrapper {
   margin-top: 40px;
 }
+.setup .wrapper .setup__title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.29em;
+  font-weight: 500;
+}
 .setup .wrapper .code-editor {
   max-width: 730px;
   margin: 0 auto 30px;
@@ -1998,9 +2004,6 @@ body.loaded .loading-wrapper .loading-wrapper span {
 }
 .setup .wrapper .code-editor .menu-bar .command-buttons .green {
   background-color: #85C98A;
-}
-.setup .wrapper .code-editor .menu-bar .title {
-  font-weight: 400;
 }
 .setup .wrapper .code-editor .setup__code {
   height: 230px;

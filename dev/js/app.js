@@ -41,8 +41,10 @@
 
       // Select the data attribute of the visible step
       var newTitle = visibleStep.getAttribute('data-title');
+
       // set it as the output of the title
       title.innerHTML = newTitle;
+      title.classList.add('fade-in-scale-bounce');
    };
 
    // 4- Show the next step
