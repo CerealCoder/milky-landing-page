@@ -26,7 +26,6 @@
    // 2 - Load first step
    function loadFirstStep() {
 
-
       // Give it the class of stepVisible
       firstStep.classList.add('visible');
       // update the output
@@ -97,8 +96,29 @@
 
    };
 
+   // 6- Reveal elements on scroll once they hit the viewport
+   function revealOnScroll() {
+      // THIS SHOULD TAKE AN ARGUMENT BUT I FORGOT WHICH ONE
+      var windowScroll = window.pageYOffset;
+      var elementTopOffset = element.getBoundingClientRect.top(); // change that
+      var elementsToReveal = Array.prototype.slice.call( document.querySelectorAll(".reveal") );
 
-   // 6 - Initialize the app
+      if (condition) {
+         elementsToReveal.forEach(function(elToReveal, index) {
+
+               setTimeout(function() {
+
+
+
+               }, 150 * (index + 1 ) );
+         });
+      }
+
+
+   }
+
+
+   // 7 - Initialize the app
    function init() {
 
       // window.onload = revealSite();// when the content is loaded, wait 2 seconds and trigger the revealing animation
@@ -110,65 +130,4 @@
 
    init();
 
-
 })();
-
-
-
-
-
-
-   // // **** TESTIMONIAL CAROUSEL **** //
-   //
-   //  // add the class visible to the first slide
-   //  var firstSlide = $('.testimonials-list .quote').first();
-   //  var lastSlide = $('.testimonials-list .quote').last();
-   //
-   //  // add the class visible to the first slide
-   //  firstSlide.addClass('visible');
-   //
-   //
-   //  var prevBtn = $('button.prev-slide');
-   //  var nextBtn = $('button.next-slide');
-   //
-   //
-   //
-   //
-   //  // When the next button is clicked remove the class visible from the current slide and pass it to the next
-   //
-   //
-   //  nextBtn.on('click', function(){
-   //
-   //    var currentSlide = $('.visible');
-   //    var nextSlide = currentSlide.next();
-   //    var slideFirst = $('.quote').first();
-   //
-   //    if (nextSlide.length === 0) {
-   //
-   //        nextSlide = firstSlide;
-   //
-   //    }
-   //
-   //    currentSlide.removeClass('visible');
-   //    nextSlide.addClass('visible fade-in');
-   //
-   //  });
-   //
-   //  // When the previous button is clicked remove the class visible from the current slide and pass it on to the previous one
-   //
-   //  prevBtn.on('click', function(){
-   //
-   //    var currentSlide = $('.visible');
-   //    var prevSlide = currentSlide.prev();
-   //    var slideFirst = $('.quote').first();
-   //
-   //    if (prevSlide.length === 0) {
-   //
-   //        prevSlide = lastSlide;
-   //
-   //    }
-   //
-   //    currentSlide.removeClass('visible');
-   //    prevSlide.addClass('visible fade-in');
-   //
-   //  });
