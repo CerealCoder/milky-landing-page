@@ -41,9 +41,10 @@
       // Select the data attribute of the visible step
       var newTitle = visibleStep.getAttribute('data-title');
 
+
       // set it as the output of the title
       title.innerHTML = newTitle;
-      title.classList.add('fade-in-scale-bounce');
+
    };
 
    // 4- Show the next step
@@ -61,7 +62,7 @@
       currentStep.classList.remove('visible');
 
       // Add it to the next element in the list and make it fade in
-      nextStep.classList.add('visible', 'fade-in-left');
+      nextStep.classList.add('visible', 'fade-in');
 
       if (nextStep == lastStep) {
          nextBtn.disabled = true;
@@ -86,7 +87,7 @@
       currentStep.classList.remove('visible');
 
       // Add it to the next element in the list and make it fade in
-      prevStep.classList.add('visible', 'fade-in-left');
+      prevStep.classList.add('visible', 'fade-in');
 
       if (prevStep == firstStep) {
          prevBtn.disabled = true;
@@ -100,19 +101,26 @@
    function revealOnScroll() {
       // THIS SHOULD TAKE AN ARGUMENT BUT I FORGOT WHICH ONE
       var windowScroll = window.pageYOffset;
-      var elementTopOffset = element.getBoundingClientRect.top(); // change that
       var elementsToReveal = Array.prototype.slice.call( document.querySelectorAll(".reveal") );
 
-      if (condition) {
-         elementsToReveal.forEach(function(elToReveal, index) {
+      elementsToReveal.forEach(function(elToReveal, index) {
 
-               setTimeout(function() {
-
+         var elementTopOffset = elToReveal.getBoundingClientRect().top; // change that
 
 
-               }, 150 * (index + 1 ) );
-         });
-      }
+         if ( windowScroll > elementTopOffset - ( window.innerHeight / 1.56 ) ) {
+
+            setTimeout(function() {
+
+               elToReveal.classList.add('fade-in-up');
+               elToReveal.classList.remove('reveal');
+
+            }, 430 * (index + 1 ) );
+
+         }
+
+      });
+
 
 
    }
@@ -125,7 +133,7 @@
       loadFirstStep();
       nextBtn.addEventListener('click', showNextStep, false);
       prevBtn.addEventListener('click', showPrevStep, false);
-
+      window.addEventListener('scroll', revealOnScroll, false);
    };
 
    init();

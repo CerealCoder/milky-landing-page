@@ -11,35 +11,23 @@ html {
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale3d(0, 0, 0);
-            transform: scale3d(0, 0, 0);
   }
   50% {
     opacity: 0.5;
-    -webkit-transform: scale3d(0.6, 0.6, 1);
-            transform: scale3d(0.6, 0.6, 1);
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
   }
 }
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale3d(0, 0, 0);
-            transform: scale3d(0, 0, 0);
   }
   50% {
     opacity: 0.5;
-    -webkit-transform: scale3d(0.6, 0.6, 1);
-            transform: scale3d(0.6, 0.6, 1);
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-            transform: scale3d(1, 1, 1);
   }
 }
 .fade-in {
@@ -1415,6 +1403,10 @@ div > code[class*="language-"] {
   border-radius: none;
 }
 
+.reveal {
+  opacity: 0;
+}
+
 h1 {
   font-size: 2em;
 }
@@ -1962,6 +1954,12 @@ body.loaded .loading-wrapper .loading-wrapper span {
   margin-bottom: 20px;
   font-size: 1.29em;
   font-weight: 500;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+}
+.setup .wrapper .setup__title.showing {
+  opacity: 1;
 }
 .setup .wrapper .code-editor {
   max-width: 730px;
