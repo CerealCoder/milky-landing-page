@@ -4,11 +4,11 @@ html
 
    include ./includes/head.jade
       
-   body.loaded
+   body
       
-      //- .loading-wrapper
-      //-    
-      //-    span.pulse-scale カリム   
+      .loading-wrapper
+         
+         span.pulse-scale カリム   
       
       main.pageWrapper
       
@@ -24,4 +24,4 @@ html
       script
          include ../js/google-analytics.js
          
-      script(src='/dev/js/app.js')
+      script(src='/assets/js/app.js')

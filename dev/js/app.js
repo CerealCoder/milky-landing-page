@@ -14,14 +14,15 @@
 
    // Functions
 
-   // 1- Load Animation
-   // var revealSite = setTimeout(function() {
-   //
-   //    logo.classList.remove('pulse-scale'); // remove the pulse-scale class
-   //    logo.classList.add('vanish-out'); // add the vanish-out class
-   //    body.classList.add('loaded'); // add the class loaded to the body
-   //
-   // }, 2000);
+   //1- Load Animation
+   var revealSite = setTimeout(function() {
+
+      logo.classList.remove('pulse-scale'); // remove the pulse-scale class
+      logo.classList.add('vanish-out'); // add the vanish-out class
+      body.classList.add('loaded'); // add the class loaded to the body
+      window.scroll(0,0);
+
+   }, 2000);
 
    // 2 - Load first step
    function loadFirstStep() {
@@ -115,7 +116,7 @@
                elToReveal.classList.add('fade-in-up');
                elToReveal.classList.remove('reveal');
 
-            }, 430 * (index + 1 ) );
+            }, 330 * (index + 1 ) );
 
          }
 
