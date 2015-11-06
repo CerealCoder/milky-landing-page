@@ -5,6 +5,7 @@ var jade = require('gulp-jade');
 var uglify = require('gulp-uglify');
 var prefix = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
+var babel = require('gulp-babel');
 var plumber = require('gulp-plumber');
 var reload = browserSync.reload;
 
@@ -23,7 +24,7 @@ gulp.task('browser-sync', function(){
 
    browserSync(files, {
 
-      server: '../',
+      server: '../public',
       notify: true
 
    });
@@ -40,7 +41,7 @@ gulp.task('jade', function () {
          pretty: true
       }))
       .on('error', console.log)
-      .pipe(gulp.dest('../'))
+      .pipe(gulp.dest('../public'))
       .pipe(reload({stream: true}));
 
 });
@@ -52,7 +53,7 @@ gulp.task('sass', function(){
 
    return sass('sass/main.sass', {
 
-      style: 'expanded',
+      style: 'compressed',
       loadPath: 'sass'
 
    })
@@ -62,7 +63,7 @@ gulp.task('sass', function(){
    .pipe(prefix({
       browsers: ['last 2 versions', '> 5%']
    }))
-   .pipe(gulp.dest('../assets/css'))
+   .pipe(gulp.dest('../public/assets/css'))
    .pipe(reload({stream: true}));
 
 });
@@ -71,10 +72,12 @@ gulp.task('sass', function(){
 
 gulp.task('uglify', function () {
 
-   gulp.src('js/*.js')
-      .pipe(plumber())
+   gulp.src('js/app.js')
+      .pipe(babel({
+          presets: ['es2015']
+      }))
       .pipe(uglify())
-      .pipe(gulp.dest('../assets/js'))
+      .pipe(gulp.dest('../public/assets/js'))
       .pipe(reload({stream: true}));
 
 });
@@ -85,7 +88,7 @@ gulp.task('imagemin', function(){
 
    gulp.src('img/*')
       .pipe(imagemin())
-      .pipe(gulp.dest('../assets/img'));
+      .pipe(gulp.dest('../public/assets/img'));
 
 });
 
