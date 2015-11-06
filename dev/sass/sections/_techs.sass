@@ -22,70 +22,46 @@
          text-align: center
          display: flex
          flex-direction: column
+         align-items: center
 
          figure
+            width: 140px
+            min-height: 335px
+            position: relative
 
-            &.html5
-
-               svg
-                  width: 170px
 
             &.sass
+               width: 190px
 
-               svg
-                  width: 250px
 
-            &.gulpJS
-
-               svg
-                  width: 140px
-                  height: auto
+            svg
+               width: 100% !important
+               height: auto !important
+               position: absolute
+               top: 50%
+               left: 50%
+               transform: translate(-50%, -50%)
 
          figcaption
-            display: none
+            display: block
             @extend %caption
+            width: 100%
 
-      // Normal Desktop Media Query
-
-      +media(max-width 1226px)
-         max-width: 63em
-
-         .techs__logo figure
-            // play around with the widths of the icons
-            &.html5
-
-               svg
-                  width: 150px
-
-            &.sass
-
-               svg
-                  width: 200px
-
-            &.gulpJS
-
-               svg
-                  width: 110px
-                  height: auto
-
-         & + .techs__description
-
-            max-width: 63em
-            margin: 0
 
       // Tablet(ish) Media Query
       +media(max-width 910px)
          max-width: 48em
 
-         & + .techs__description
+         .techs__logo
 
-            max-width: 48em
-            position: relative
-            top: -20px
+            figure.gulpJS
 
-            p
+               width: 120px
+
+            figcaption
 
                font-size: 15px
+
 
       // Defo Tablet
       +media(max-width 768px)
@@ -100,18 +76,14 @@
             &:last-child
                margin-bottom: 0
 
-            figure svg
-               height: auto !important
 
-            figcaption
-               display: block
-               margin-top: 35px
-               width: 100%
+            figure
+               &.html5
 
+                  width: 170px
 
-
-         & + .techs__description
-            display: none
+               &.sass
+                  width: 260px
 
       // Semi Mobile
       +media(max-width 527px)
@@ -125,6 +97,7 @@
    .techs__description
 
       margin-top: 25px
+      display: none
 
       p
          @extend %caption

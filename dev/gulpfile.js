@@ -76,6 +76,7 @@ gulp.task('uglify', function () {
       .pipe(babel({
           presets: ['es2015']
       }))
+      .pipe(plumber())
       .pipe(uglify())
       .pipe(gulp.dest('../public/assets/js'))
       .pipe(reload({stream: true}));

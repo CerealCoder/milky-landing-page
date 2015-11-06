@@ -1,12 +1,14 @@
 section.setup
 
    h3.setup__header Setup 
-
+   
    .wrapper
-      
+         
       // The code editor
       .code-editor
-            
+         
+         h4.setup__title.showing
+               
          // menu bar
          .menu-bar
          
@@ -15,17 +17,25 @@ section.setup
                span.yellow
                span.green
             
-            h4.title Step 1 : Do Something with the code.
-         
          // Code goes here
-         pre.language-sass
-            
-            div
-               code.language-sass p {color: red};
-               code.language-sass a {text-decoration: none};
-            
-            div
-                     
-               code.language-javascript 
-                  | function(){ return false; }
-               code.language-javascript strong {text-align: left};
+         div.setup__code
+         
+            pre.step(data-title="Step 1: Clone the repository and navigate to the dev folder", data-step="step-one")
+               code <span>$</span> git clone git@github.com:MilkshakePanda/Milky.git
+               code <span>$</span> cd path/to/Milky/dev
+               
+            pre.step(data-title="Step 2: Install the dependencies", data-step="step-two")
+               code <span>$</span> sudo npm install
+               
+            pre.step(data-title="Step 3: Run gulp and let the magic happen!", data-step="step-three")
+               code <span>$</span> gulp
+      
+      // navigation buttons 
+      .setup__buttons
+         
+         button(type="button").setup__previous 
+            span Previous
+         button(type="button").setup__next 
+            span Next
+         
+         
