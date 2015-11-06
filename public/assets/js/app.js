@@ -1,0 +1,1 @@
+"use strict";!function(){var s=document.body,e=document.querySelector(".loading-wrapper span"),o=setTimeout(function(){e.classList.remove("pulse-scale"),e.classList.add("vanish-out"),s.classList.add("loaded")},2e3);window.onload=o}();
